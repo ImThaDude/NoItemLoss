@@ -1,3 +1,5 @@
 name: NoItemLoss
 main: noitemloss.NoItemLoss
 version: 1.0
+
+depend: [DreamWorldStarter]
