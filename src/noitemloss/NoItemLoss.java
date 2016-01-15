@@ -28,7 +28,12 @@ public class NoItemLoss extends JavaPlugin {
     
     public void onEnable() {
         
+        //Register Events
         getServer().getPluginManager().registerEvents(new PlayerDeathListener(), this);
+        
+        //Create config YML folder and stuff.
+        getConfig().options().copyDefaults(true);
+        saveConfig();
         
         Bukkit.getLogger().log(new LogRecord(Level.INFO, "GameruleBackup for " + this.getName() + " backing up current."));
         //Creating the backup object uniquely to keepInventory.
